@@ -1,0 +1,14 @@
+{application, plists,
+[
+    {description, "plists"},
+    {vsn, "1.0.0"},
+    {modules, [
+        plists
+    ]},
+    {registered, []},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {env, []}
+]}.
