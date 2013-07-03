@@ -1,4 +1,3 @@
-## Where we install LFE, in the ERL_LIBS directory.
 EBIN=ebin
 SRC=src
 FINISH=-run init stop -noshell
