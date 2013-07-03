@@ -1,12 +1,13 @@
+#############
 Erlang plists
-=============
+#############
 
 This is a fork of the Google Code SVN repository for plists.
 The original code is available at: <http://code.google.com/p/plists/>.
 
 
 Summary
--------
+=======
 
 `plists` is a drop-in replacement for the Erlang module `lists`, making most
 list operations parallel. It can operate on each element in parallel, for IO-
@@ -31,7 +32,26 @@ and a blog post with some examples at
 
 
 Building and Installing
------------------------
+=======================
+
+
+Using Rebar
+-----------
+
+plists now supports the use of rebar, and this is the recommended way to compile
+the library. This is how it will be used by those who include it as a dependency
+in their own rebar.config files.
+
+To build:
+
+    $ rebar compile
+
+Rebar doesn't support installing libraries in a system, so you should use the
+Makefile for that.
+
+
+Using the Makefile
+-------------------
 
 To build, simply use the `Makefile` provided in the project:
 
