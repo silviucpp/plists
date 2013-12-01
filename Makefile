@@ -23,7 +23,7 @@ clean:
 
 compile: clean
 	mkdir $(EBIN)
-	erl -run make all $(FINISH)
+	rebar compile
 
 docs:
 	cd doc && \
