@@ -51,7 +51,7 @@ Makefile for that.
 
 
 Using the Makefile
--------------------
+------------------
 
 To build, simply use the `Makefile` provided in the project:
 
@@ -70,3 +70,13 @@ your preferred library. For example:
 
     $ sudo ERL_LIBS=`erl -eval 'io:fwrite(code:lib_dir()), halt().' -noshell` \
         make install
+
+
+Bonus
+-----
+
+There are two examples provided as well: one using the Erlang synchronous http
+client (and not using plist), and the other using the async http client and
+using plist. Do note that these are using LFE ;-)
+ * <a href="https://github.com/oubiwann/plists/blob/master/examples/http-sync.lfe">http-sync.lfe</a>
+ * <a href="https://github.com/oubiwann/plists/blob/master/examples/http-async.lfe">http-async.lfe</a>
