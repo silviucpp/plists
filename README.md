@@ -67,7 +67,9 @@ at your preferred library. For example:
         make install
 
 
-### Bonus
+## Bonus Materials
+
+### Examples
 
 There are two examples provided as well: one using the Erlang synchronous http
 client (and not using plist), and the other using the async http client and
