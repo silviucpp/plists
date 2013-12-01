@@ -66,7 +66,7 @@ If you'd like to build the docs:
 The updated docs will be in the `./doc` directory.
 
 To install `plists` in your Erlang system, simply point the `make` target at
-your preferred library. For instance, if your Erlang is running out of
-`/opt/erlang/r15b03`, do the following:
+your preferred library. For example:
 
-    $ ERL_LIBS=/opt/erlang/r15b03/lib make install
+    $ sudo ERL_LIBS=`erl -eval 'io:fwrite(code:lib_dir()), halt().' -noshell` \
+        make install
