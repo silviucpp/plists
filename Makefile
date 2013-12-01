@@ -34,7 +34,7 @@ docs:
 # 	$ ERL_LIBS=/opt/erlang/r15b03/lib make install
 install: INSTALLDIR=$(shell make get-installdir)
 install:
-	@if [ "$$ERL_LIBS" != "" ]; \
+	if [ "$$ERL_LIBS" != "" ]; \
 	then mkdir -p $(INSTALLDIR)/$(EBIN); \
 		 mkdir -p $(INSTALLDIR)/$(SRC); \
 	     cp -pPR $(EBIN) $(INSTALLDIR); \
