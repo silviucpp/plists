@@ -171,7 +171,7 @@
 %%% processes. The error propagation system goes into effect, which
 %%% results in the error occuring in the calling process.
 %%%
--module(ec_plists).
+-module(plists).
 
 -export([all/2, all/3,
          any/2, any/3,
