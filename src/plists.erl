@@ -173,6 +173,8 @@
 %%%
 -module(plists).
 
+-include("exceptions.hrl").
+
 -export([all/2, all/3,
          any/2, any/3,
          filter/2, filter/3,
@@ -830,10 +832,10 @@ cluster_runmany(Fun, Fuse, [Task|TaskList], [N|Nodes], Running, Results) ->
                            ok;
                        exit:Reason ->
                            Parent ! {erlang:self(), error, Reason};
-                       error:R ->
-                           Parent ! {erlang:self(), error, {R, erlang:get_stacktrace()}};
-                       throw:R ->
-                           Parent ! {erlang:self(), error, {{nocatch, R}, erlang:get_stacktrace()}}
+                       ?EXCEPTION(error, R, Stacktrace) ->
+                           Parent ! {erlang:self(), error, {R, ?GET_STACK(Stacktrace)}};
+                       ?EXCEPTION(throw, R, Stacktrace) ->
+                           Parent ! {erlang:self(), error, {{nocatch, R}, ?GET_STACK(Stacktrace)}}
                    end
            end,
     Pid = proc_lib:spawn(N, Fun3),

@@ -1,14 +1,9 @@
-{application, plists,
-[
+{application, plists, [
     {description, "plists"},
-    {vsn, "1.1.1"},
-    {modules, [
-        plists
-    ]},
+    {vsn, "1.1.3"},
     {registered, []},
-    {applications, [
-        kernel,
-        stdlib
-    ]},
+    {applications, [kernel, stdlib]},
+    {included_applications, []},
+    {mod, {plists, []}},
     {env, []}
 ]}.
