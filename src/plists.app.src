@@ -4,6 +4,6 @@
     {registered, []},
     {applications, [kernel, stdlib]},
     {included_applications, []},
-    {mod, {plists, []}},
+    {modules, [plists]},
     {env, []}
 ]}.
